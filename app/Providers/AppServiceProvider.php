@@ -5,6 +5,9 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
+use Illuminate\Support\Facades\URL;
+use Illuminate\Pagination\Paginator;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -22,5 +25,10 @@ class AppServiceProvider extends ServiceProvider
     {
         // Ensure compatibility with older MySQL versions (index length)
         Schema::defaultStringLength(191);
+        Paginator::useBootstrap();
+
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 }
