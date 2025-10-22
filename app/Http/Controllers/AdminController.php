@@ -66,7 +66,7 @@ class AdminController extends Controller
                     'role' => $admin->role,
                     'ip' => $request->ip(),
                 ]);
-                return redirect('http://127.0.0.1:8000/shop')
+                return redirect('shop')
                     ->withErrors(['email' => 'Access denied. Admin role required.']);
             }
 
