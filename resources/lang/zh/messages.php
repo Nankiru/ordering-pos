@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'app_name' => 'SadTime 管理后台',
+    'welcome' => '欢迎，管理员',
+    'users' => '用户',
+    'admins' => '管理员',
+    'menu_items' => '菜单项',
+    'view_orders' => '查看订单',
+    'sales_report' => '销售报表',
+    'logout' => '退出登录',
+    'admin_login' => '管理员登录',
+    'email' => '邮箱地址',
+    'password' => '密码',
+    'login' => '登录',
+    'manage_menu' => '管理菜单',
+    'manage_menu_sub' => '创建并管理分类和菜单项',
+    'search_placeholder' => '搜索菜单或分类...',
+    'new_category' => '新建分类',
+    'new_item' => '新建菜单项',
+    'categories' => '分类',
+    'items' => '菜单',
+    'no_categories' => '暂无分类 — 请先创建一个。',
+    'no_items' => '暂无菜单项 — 请点击“新建菜单项”。',
+    'image' => '图片',
+    'name' => '名称',
+    'category' => '分类',
+    'price_usd' => '价格 $',
+    'price_khr' => '价格 ៛',
+    'actions' => '操作',
+    'edit' => '编辑',
+    'delete' => '删除',
+];
+
+

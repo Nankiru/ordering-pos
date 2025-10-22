@@ -1,0 +1,121 @@
+┌────────────────────────────────────────────────────────────────────────┐
+│                                                                        │
+│  ⚠️  WHY YOU'RE GETTING "ACCOUNT NOT VISIBLE" ERROR                   │
+│                                                                        │
+└────────────────────────────────────────────────────────────────────────┘
+
+The Problem:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your QR code contains:  sopheanan_khem@aclb
+
+When ABA Bakong app scans it, it asks Bakong servers:
+"Does merchant account 'sopheanan_khem@aclb' exist?"
+
+Bakong server responds: ❌ "NO - This account doesn't exist!"
+
+Result: Error message "This account number is not visible"
+
+
+The Solution:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You need a REAL Bakong merchant account!
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  OPTION 1: Get Real Bakong Merchant Account (RECOMMENDED)          │
+└─────────────────────────────────────────────────────────────────────┘
+
+Step 1: Download Bakong App
+   📱 iOS: App Store → Search "Bakong"
+   📱 Android: Play Store → Search "Bakong"
+
+Step 2: Register as Merchant
+   • Open Bakong app
+   • Choose "Register as Merchant/Business"
+   • Complete registration form
+   • Submit required documents (Business license, ID, etc.)
+
+Step 3: Get Approved
+   • Wait for KYC verification (1-3 business days)
+   • Receive your merchant account ID
+
+Step 4: Update Your Code
+   • Open: .env file
+   • Change BAKONG_ID="sopheanan_khem@aclb"
+   • To:    BAKONG_ID="your_real_merchant_id@aba"
+   • Change BAKONG_MERCHANT_NAME to your business name
+
+Step 5: Clear Cache
+   Run: php artisan config:clear
+
+Step 6: Test
+   ✅ Scan QR code → It works!
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  OPTION 2: Use Test/Demo Account from Bank                         │
+└─────────────────────────────────────────────────────────────────────┘
+
+Contact ACLB Bank or ABA Bank and ask:
+"Do you provide a sandbox/test merchant account for KHQR testing?"
+
+Some banks provide test accounts like:
+   • test_merchant@aclb
+   • demo_store@aba
+   • sandbox123@wing
+
+Update .env with the test account they provide.
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│  OPTION 3: Test Without Real Scanning (FOR DEVELOPMENT)            │
+└─────────────────────────────────────────────────────────────────────┘
+
+For testing your app WITHOUT a real Bakong account:
+
+1. Go through checkout normally
+2. Reach the payment page with QR code
+3. Note the MD5 hash (visible in URL or page)
+4. Open: http://127.0.0.1:8000/khqr-simulator
+5. Enter the MD5 hash
+6. Click "Simulate Payment"
+7. ✅ Order completes successfully!
+
+This lets you test the entire payment flow without scanning.
+
+
+Current Status:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Code:         Working perfectly
+✅ QR Format:    100% correct (KHQR compliant)
+✅ Integration:  Complete
+✅ Simulator:    Working
+
+❌ Real Account: NOT registered in Bakong system
+
+Next Action: Choose one of the 3 options above!
+
+
+Why This Happened:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The account "sopheanan_khem@aclb" is just a placeholder/example account.
+It's like trying to call a fake phone number - the format is right, but
+nobody is at that number!
+
+For REAL payments, you MUST use a REAL registered merchant account.
+
+
+Summary:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem:   Test account doesn't exist in Bakong system
+Solution:  Get real merchant account OR use payment simulator
+Timeline:  1-3 days for merchant account approval
+Cost:      Free (Bakong accounts are free)
+
+Questions? Read: ACCOUNT_NOT_FOUND_EXPLANATION.md
+

@@ -1,0 +1,35 @@
+<?php
+
+return [
+    'app_name' => 'SadTime Admin',
+    'welcome' => 'Welcome, Admin',
+    'users' => 'Users',
+    'admins' => 'Admins',
+    'menu_items' => 'Menu Items',
+    'view_orders' => 'View Orders',
+    'sales_report' => 'Sales Report',
+    'logout' => 'Logout',
+    'admin_login' => 'Admin Login',
+    'email' => 'Email address',
+    'password' => 'Password',
+    'login' => 'Login',
+    'manage_menu' => 'Manage Menu',
+    'manage_menu_sub' => 'Create and manage categories and menu items',
+    'search_placeholder' => 'Search items or categories...',
+    'new_category' => 'New Category',
+    'new_item' => 'New Item',
+    'categories' => 'Categories',
+    'items' => 'Items',
+    'no_categories' => 'No categories yet — create one to get started.',
+    'no_items' => 'No items yet — add some using the New Item button.',
+    'image' => 'Image',
+    'name' => 'Name',
+    'category' => 'Category',
+    'price_usd' => 'Price $',
+    'price_khr' => 'Price ៛',
+    'actions' => 'Actions',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+];
+
+
